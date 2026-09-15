@@ -1,423 +1,390 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Shin — Full-Stack Software Engineer</title>
-    <meta name="description" content="Full-Stack Software Engineer based in Auckland, NZ. Delivering performant web applications with C#/.NET, React, TypeScript, and SQL." />
+    <title>Mark Shin | Full-Stack Engineer</title>
+    <meta
+      name="description"
+      content="Full-Stack Engineer based in Auckland, NZ. C#/.NET, React, TypeScript, and SQL."
+    />
 
-    <!-- Semantic & Social Meta -->
-    <meta property="og:title" content="Mark Shin — Full-Stack Software Engineer" />
-    <meta property="og:description" content="Practical software engineering focused on business workflows, performance, and reliability." />
-    <meta property="og:type" content="website" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3EMS%3C/text%3E%3C/svg%3E">
-
-    <!-- Inter & JetBrains Mono Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<div class="site-container">
-    <!-- Header -->
+  </head>
+  <body>
     <header class="site-header">
+      <div class="header-inner">
         <div class="brand">
-            <a href="#hero" class="brand-link">Mark Shin</a>
-            <span class="brand-sub">Auckland, NZ</span>
+          <a href="#hero" class="brand-title">Mark Shin</a>
+          <span class="brand-location">Auckland, NZ</span>
         </div>
         <nav class="site-nav" aria-label="Main Navigation">
-            <a href="#work">Work</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                <span class="theme-text">Dark</span>
-            </button>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a
+            href="https://docs.google.com/document/d/e/2PACX-1vRyzK-snUprn7fmWFF6xhkJO1kX4F_Y0AiiICVL_R_pM5PekAClO0_d5Xg6xMd_ClqlHxy21Exij9-z/pub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-cv-link"
+            >CV ↗</a
+          >
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            Dark
+          </button>
         </nav>
+      </div>
     </header>
 
-    <main>
-        <!-- Hero -->
-        <section id="hero" class="hero-section">
-            <div class="hero-layout">
-                <div class="hero-content">
-                    <div class="badge-status">
-                        <span class="status-indicator"></span>
-                        <span>Open Work Visa — Immediate Start (No Sponsorship Required)</span>
-                    </div>
-                    <h1 class="hero-title">Full-Stack Software Engineer</h1>
-                    <p class="hero-tagline">
-                        I build practical, high-throughput software that makes real-world workflows faster, simpler, and more reliable. Specialising in C#/.NET, React, TypeScript, and relational databases.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="https://docs.google.com/document/d/1UDamyZTqNAwNWK1NVcUFCLtd3Z0PSJNe-Y5i9z2fOiU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View CV (PDF) ↗</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                        <a href="https://github.com/Seongrok-Shin/" target="_blank" rel="noreferrer" class="link-discrete">GitHub ↗</a>
-                        <a href="https://linkedin.com/in/seongrok-shin-1448961a1" target="_blank" rel="noreferrer" class="link-discrete">LinkedIn ↗</a>
-                    </div>
-                </div>
-                <div class="hero-photo-container">
-                    <img src="profile.jpg" alt="Mark Shin" class="profile-photo" id="profile-img" />
-                    <div class="photo-fallback" id="profile-fallback" aria-hidden="true">MS</div>
-                </div>
+    <main class="site-main">
+      <section id="hero" class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-media">
+            <div class="photo-frame">
+              <img
+                src="profile.jpg"
+                alt="Mark Shin"
+                class="profile-img"
+                id="profile-img"
+              />
+              <div class="photo-fallback" id="profile-fallback">MS</div>
             </div>
-        </section>
+          </div>
 
-        <!-- Selected Work (Case Studies) -->
-        <section id="work" class="section">
-            <div class="section-head">
-                <span class="section-kicker">01 / Selected Work</span>
-                <h2 class="section-title">Engineered Solutions & Case Studies</h2>
-                <p class="section-desc">Focused on real business bottlenecks, measurable performance gains, and high-concurrency data integrity.</p>
+          <div class="hero-intro">
+            <div class="status-pill">
+              <span class="dot"></span>
+              <span>Open Work Visa (No Sponsorship Required)</span>
             </div>
-
-            <div class="case-study-list">
-                <!-- Case Study 1: AGB Stone -->
-                <article class="case-study" id="case-agb">
-                    <div class="case-meta">
-                        <span class="case-org">AGB Stone</span>
-                        <span class="case-role">Full-Stack Engineer</span>
-                        <span class="case-period">Commercial • May 2025 – Aug 2026</span>
-                    </div>
-                    <h3 class="case-heading">Regional Order Processing & Multi-Database Synchronisation Re-engineering</h3>
-
-                    <div class="case-grid">
-                        <div class="case-col">
-                            <span class="col-label">Problem</span>
-                            <p>Regional branches suffered from heavy page load times (~10 minutes for large order sets) and concurrency conflicts when updating stock across 8+ independently running regional MariaDB databases.</p>
-                        </div>
-                        <div class="case-col">
-                            <span class="col-label">What I Built</span>
-                            <p>Implemented server-side pagination with ASP.NET Core and Razor. Re-architected multi-master data synchronisation routines, automated order-entry workflows with pre-configured defaults, and integrated HERE Location API for geocoding validation.</p>
-                        </div>
-                        <div class="case-col">
-                            <span class="col-label">Impact</span>
-                            <ul class="impact-list">
-                                <li><strong>>90% page load reduction:</strong> dropped from ~10 mins to under 1 min.</li>
-                                <li><strong>80% faster processing:</strong> order-entry reduced from 5 mins to <1 min.</li>
-                                <li>Eliminated concurrent-update conflicts across 8+ regional database instances.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="case-footer">
-                        <div class="tech-pills">
-                            <span>C#</span><span>ASP.NET Core</span><span>Razor</span><span>Azure SQL</span><span>MariaDB</span><span>HERE Location API</span>
-                        </div>
-                        <button class="expand-btn" data-target="details-agb">Read Architecture Breakdown ↓</button>
-                    </div>
-
-                    <div class="case-details" id="details-agb" hidden>
-                        <div class="details-inner">
-                            <h4>Key Technical Decisions</h4>
-                            <ul>
-                                <li><strong>Data Sync:</strong> Implemented idempotent synchronization workers with version-based conflict resolution, preventing concurrent branch updates from corrupting central inventory.</li>
-                                <li><strong>Server-side Pagination:</strong> Shifted heavyweight SQL aggregation from in-memory processing to indexed SQL cursor/offset queries, eliminating browser memory thrashing on legacy branch workstations.</li>
-                                <li><strong>Address Normalisation:</strong> Integrated the HERE API directly into REST validation pipelines before saving to SQL tables, ensuring downstream transport drivers received validated GPS and road data.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Case Study 2: Be Herd -->
-                <article class="case-study" id="case-beherd">
-                    <div class="case-meta">
-                        <span class="case-org">Be Herd Limited</span>
-                        <span class="case-role">Co-Founder & Frontend Engineer</span>
-                        <span class="case-period">Startup / PWA • July 2024 – Present</span>
-                    </div>
-                    <h3 class="case-heading">Accessible, Mobile-First Civic Referendum Platform (PWA)</h3>
-
-                    <div class="case-grid">
-                        <div class="case-col">
-                            <span class="col-label">Problem</span>
-                            <p>Civic participation platforms often exclude non-technical users and visually impaired voters, while typical chart visualizations accidentally trigger political bias through primary colour associations.</p>
-                        </div>
-                        <div class="case-col">
-                            <span class="col-label">What I Built</span>
-                            <p>Engineered a responsive Progressive Web App using React, Vite, and TypeScript. Built custom greyscale pattern-based charting components (bars/pies) and centralized JWT authentication with Redux connected to Django REST APIs.</p>
-                        </div>
-                        <div class="case-col">
-                            <span class="col-label">Impact</span>
-                            <ul class="impact-list">
-                                <li>Unbiased, colourblind-safe data visualisation meeting strict accessibility standards.</li>
-                                <li>Offline-capable PWA architecture for low-connectivity community access.</li>
-                                <li>Automated Vitest UI suites in CI/CD, eliminating critical auth regressions.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="case-footer">
-                        <div class="tech-pills">
-                            <span>React</span><span>TypeScript</span><span>Redux</span><span>Vite</span><span>Vitest</span><span>PWA</span><span>CI/CD</span>
-                        </div>
-                        <a href="https://github.com/Seongrok-Shin/" target="_blank" rel="noreferrer" class="link-discrete">GitHub Repository ↗</a>
-                    </div>
-                </article>
-
-                <!-- Case Study 3: GovHack Multi-Year Awardees -->
-                <article class="case-study" id="case-govhack">
-                    <div class="case-meta">
-                        <span class="case-org">GovHack New Zealand (2022 – 2024)</span>
-                        <span class="case-role">Lead / Full-Stack Developer</span>
-                        <span class="case-period">National Competition • 3x Consecutive Winner</span>
-                    </div>
-                    <h3 class="case-heading">Rapid High-Impact Engineering: SolarCast, Green Kiwi & PipeWatch</h3>
-
-                    <div class="case-grid">
-                        <div class="case-col">
-                            <span class="col-label">SolarCast (2024 Runner-Up)</span>
-                            <p>Interactive 46-hour sprint web app integrating solar-irradiance APIs with a <strong>Three.js</strong> 3D rooftop simulation to calculate household power generation.</p>
-                            <span class="tech-sub">React · TypeScript · Three.js · MUI</span>
-                        </div>
-                        <div class="case-col">
-                            <span class="col-label">Green Kiwi (2023 Winner)</span>
-                            <p>Location-based household carbon tracking platform with real-time Firebase community leaderboards and Chart.js emission tracking.</p>
-                            <span class="tech-sub">Next.js · Firebase · Chart.js · Tailwind</span>
-                        </div>
-                        <div class="case-col">
-                            <span class="col-label">PipeWatch (2022 Winner)</span>
-                            <p>Geospatial flood risk API querying Auckland pipe networks with <strong>GeoDjango & PostGIS</strong>, pushing alerts via WebSockets/Channels.</p>
-                            <span class="tech-sub">Python · GeoDjango · PostGIS · WebSockets</span>
-                        </div>
-                    </div>
-
-                    <div class="case-footer">
-                        <div class="tech-pills">
-                            <span>Rapid Prototyping</span><span>Geospatial APIs</span><span>Three.js</span><span>PostGIS</span><span>WebSockets</span>
-                        </div>
-                        <a href="https://github.com/Seongrok-Shin/" target="_blank" rel="noreferrer" class="link-discrete">Explore GovHack Repositories ↗</a>
-                    </div>
-                </article>
+            <h1 class="hero-name">Mark Shin</h1>
+            <div class="hero-role">Full-Stack Software Engineer</div>
+            <p class="hero-statement">
+              I engineer business software that simplifies operations and scales
+              under load. Focused on translating technical bottlenecks into
+              responsive frontends, ASP.NET Core backends, and reliable
+              relational databases. AUT Computer Science graduate based in
+              Auckland.
+            </p>
+            <div class="hero-links">
+              <a
+                href="https://docs.google.com/document/d/e/2PACX-1vRyzK-snUprn7fmWFF6xhkJO1kX4F_Y0AiiICVL_R_pM5PekAClO0_d5Xg6xMd_ClqlHxy21Exij9-z/pub"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="action-btn action-primary"
+                >View Full CV ↗</a
+              >
+              <a
+                href="https://github.com/Seongrok-Shin/"
+                target="_blank"
+                rel="noreferrer"
+                class="action-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://linkedin.com/in/seongrok-shin-1448961a1"
+                target="_blank"
+                rel="noreferrer"
+                class="action-btn"
+                >LinkedIn</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Experience -->
-        <section id="experience" class="section">
-            <div class="section-head">
-                <span class="section-kicker">02 / Experience</span>
-                <h2 class="section-title">Commercial Experience</h2>
+      <section id="experience" class="section">
+        <div class="section-tag">01 / Experience & Work</div>
+        <h2 class="section-heading">Engineering & Product Deliveries</h2>
+
+        <div class="entry-list">
+          <article class="entry-item">
+            <div class="entry-header">
+              <div>
+                <h3 class="entry-title">Full-Stack Engineer</h3>
+                <div class="entry-company">
+                  AGB Stone <span class="entry-sep">/</span> Auckland, NZ
+                </div>
+              </div>
+              <div class="entry-date">May 2025 – Aug 2026</div>
             </div>
-
-            <div class="timeline">
-                <!-- Item 1 -->
-                <div class="timeline-row">
-                    <div class="timeline-aside">
-                        <span class="period">May 2025 – Aug 2026</span>
-                        <span class="location">Auckland, NZ</span>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="role-line">
-                            <h3 class="role-title">Full-Stack Engineer</h3>
-                            <span class="company-name">AGB Stone</span>
-                        </div>
-                        <p class="role-summary">Full-stack development, database synchronisation, and workflow automation across distributed retail/factory operations.</p>
-                        <ul class="detail-bullets">
-                            <li>Re-engineered data synchronisation routines across 8+ independent regional MariaDB databases, resolving concurrent write race conditions.</li>
-                            <li>Designed server-side pagination in ASP.NET Core & Razor, shrinking page-load latency from ~10 minutes to under one minute (>90% reduction).</li>
-                            <li>Automated order input workflows with operational defaults, cutting processing time from 5 minutes to under 60 seconds.</li>
-                            <li>Integrated HERE Location API to validate spatial delivery data before persistent storage in SQL Server.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <code>C#</code> <code>ASP.NET Core</code> <code>Razor</code> <code>Azure SQL</code> <code>MariaDB</code> <code>Bootstrap 5</code>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="timeline-row">
-                    <div class="timeline-aside">
-                        <span class="period">Jul 2024 – Present</span>
-                        <span class="location">Auckland, NZ</span>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="role-line">
-                            <h3 class="role-title">Co-Founder & Frontend Engineer</h3>
-                            <span class="company-name">Be Herd Limited</span>
-                        </div>
-                        <p class="role-summary">Architected a mobile-first Progressive Web App (PWA) facilitating community referendums and civic discussions.</p>
-                        <ul class="detail-bullets">
-                            <li>Built accessible data visualization charts utilizing greyscale contrast patterns to prevent political party colour bias.</li>
-                            <li>Managed JWT session lifecycle and centralized application state using Redux connected to Django REST Framework.</li>
-                            <li>Implemented comprehensive Vitest unit/UI test suites in the CI/CD pipeline to catch regressions pre-deployment.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <code>React</code> <code>TypeScript</code> <code>Redux</code> <code>Vite</code> <code>Vitest</code> <code>PWA</code>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="timeline-row">
-                    <div class="timeline-aside">
-                        <span class="period">May 2025 – Aug 2025</span>
-                        <span class="location">Auckland, NZ</span>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="role-line">
-                            <h3 class="role-title">Frontend Engineer (Contract)</h3>
-                            <span class="company-name">Snnr Limited</span>
-                        </div>
-                        <p class="role-summary">Contracted to deliver a functional MVP dashboard digitising hospitality compliance and food-safety logging.</p>
-                        <ul class="detail-bullets">
-                            <li>Developed modular Angular and Tailwind CSS components for an administration management panel under strict delivery deadlines.</li>
-                            <li>Built and integrated ASP.NET Core C# CRUD REST endpoints with Microsoft SQL Server backend.</li>
-                            <li>Unblocked critical B2B enterprise sales demos by launching the MVP within three months.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <code>Angular</code> <code>TypeScript</code> <code>Tailwind CSS</code> <code>ASP.NET Core</code> <code>SQL Server</code>
-                        </div>
-                    </div>
-                </div>
+            <p class="entry-desc">
+              Developed and optimized internal systems supporting distributed
+              regional operations and warehouse logistics across New Zealand.
+            </p>
+            <ul class="entry-bullets">
+              <li>
+                Re-engineered synchronization routines across 8+ independent
+                regional MariaDB databases, eliminating race conditions and data
+                conflicts.
+              </li>
+              <li>
+                Designed server-side pagination with ASP.NET Core and Razor,
+                reducing heavy order-set load times by over 90% (from 10 mins to
+                under 1 min).
+              </li>
+              <li>
+                Automated order-entry workflows using configured operational
+                presets, cutting average processing duration from 5 minutes to
+                under 1 minute.
+              </li>
+              <li>
+                Integrated HERE Location REST APIs to validate street-level
+                routing data before persistent commit in Azure SQL.
+              </li>
+            </ul>
+            <div class="entry-tags">
+              <code>C#</code> <code>ASP.NET Core</code> <code>Razor</code>
+              <code>Azure SQL</code> <code>MariaDB</code> <code>HERE API</code>
             </div>
-        </section>
+          </article>
 
-        <!-- Technical Skills -->
-        <section id="skills" class="section">
-            <div class="section-head">
-                <span class="section-kicker">03 / Technical Capabilities</span>
-                <h2 class="section-title">Skills & Tooling</h2>
+          <article class="entry-item">
+            <div class="entry-header">
+              <div>
+                <h3 class="entry-title">Co-Founder & Frontend Engineer</h3>
+                <div class="entry-company">
+                  Be Herd Limited <span class="entry-sep">/</span> Auckland, NZ
+                </div>
+              </div>
+              <div class="entry-date">Jul 2024 – Present</div>
             </div>
-
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <span class="group-title">Languages</span>
-                    <ul class="group-items">
-                        <li>C# (.NET)</li>
-                        <li>TypeScript</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>SQL (T-SQL, MySQL)</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <span class="group-title">Backend & APIs</span>
-                    <ul class="group-items">
-                        <li>ASP.NET Core Web API</li>
-                        <li>RESTful Architecture</li>
-                        <li>JWT Authentication & Auth Flows</li>
-                        <li>Django & Django REST Framework</li>
-                        <li>WebSockets</li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <span class="group-title">Frontend</span>
-                    <ul class="group-items">
-                        <li>React & Next.js</li>
-                        <li>Angular</li>
-                        <li>Razor Pages</li>
-                        <li>Redux Toolkit</li>
-                        <li>Tailwind CSS / MUI / Bootstrap</li>
-                        <li>Vite / Webpack</li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <span class="group-title">Databases & Storage</span>
-                    <ul class="group-items">
-                        <li>Microsoft SQL Server / Azure SQL</li>
-                        <li>MariaDB</li>
-                        <li>PostgreSQL / PostGIS</li>
-                        <li>Firebase Firestore</li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <span class="group-title">Testing & DevOps</span>
-                    <ul class="group-items">
-                        <li>Vitest & Playwright</li>
-                        <li>Unit & UI Integration Testing</li>
-                        <li>CI/CD GitHub Actions</li>
-                        <li>Git Version Control</li>
-                    </ul>
-                </div>
+            <p class="entry-desc">
+              Built an accessible, mobile-first Progressive Web App (PWA)
+              facilitating community referendums and civic discussions.
+            </p>
+            <ul class="entry-bullets">
+              <li>
+                Engineered custom responsive bar and pie charts using greyscale
+                patterns rather than color palettes to eliminate accidental
+                political party bias.
+              </li>
+              <li>
+                Centralized API interactions and state with Redux, interfacing
+                with Django REST Framework backends via JWT authentication
+                flows.
+              </li>
+              <li>
+                Constructed automated unit and UI testing pipelines using Vitest
+                and GitHub Actions CI/CD to prevent regressions on core voting
+                paths.
+              </li>
+            </ul>
+            <div class="entry-tags">
+              <code>React</code> <code>TypeScript</code> <code>Redux</code>
+              <code>Vite</code> <code>Vitest</code> <code>PWA</code>
             </div>
-        </section>
+          </article>
 
-        <!-- About & Education -->
-        <section id="about" class="section">
-            <div class="section-head">
-                <span class="section-kicker">04 / Background</span>
-                <h2 class="section-title">About & Education</h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-narrative">
-                    <p>
-                        I am a software engineer based in Auckland, New Zealand. My focus is on resolving operational drag—whether that means turning a 10-minute database report into an instant query, untangling asynchronous branch conflicts, or engineering an accessible frontend that anyone can understand.
-                    </p>
-                    <p>
-                        I bridge the gap between frontend UI precision and backend database reliability. I value code that is legible, testable, and maintainable over excessive abstraction.
-                    </p>
+          <article class="entry-item">
+            <div class="entry-header">
+              <div>
+                <h3 class="entry-title">Frontend Engineer (Contract)</h3>
+                <div class="entry-company">
+                  Snnr Limited <span class="entry-sep">/</span> Auckland, NZ
                 </div>
-
-                <div class="education-block">
-                    <span class="block-kicker">Education</span>
-                    <h3 class="degree-title">Bachelor of Computer and Information Science</h3>
-                    <span class="uni-name">Auckland University of Technology (AUT)</span>
-                    <span class="uni-dates">Mar 2021 – Dec 2023 • Auckland, New Zealand</span>
-
-                    <div class="work-rights-box">
-                        <span class="box-title">Work Authorization</span>
-                        <p>Holds an active <strong>Open Work Visa</strong> with full legal rights to work in New Zealand. No employer visa sponsorship or accreditation required.</p>
-                    </div>
-                </div>
+              </div>
+              <div class="entry-date">May 2025 – Aug 2025</div>
             </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section contact-section">
-            <div class="section-head">
-                <span class="section-kicker">05 / Contact</span>
-                <h2 class="section-title">Let’s Discuss an Opportunity</h2>
-                <p class="section-desc">Available for Full-Stack, Backend, or Frontend engineering roles across New Zealand.</p>
+            <p class="entry-desc">
+              Contract engagement to digitize paper-based food safety records
+              for commercial kitchens and hospitality venues.
+            </p>
+            <ul class="entry-bullets">
+              <li>
+                Built reusable Angular and Tailwind CSS interfaces for an
+                administration compliance panel under strict sprint deadlines.
+              </li>
+              <li>
+                Implemented and connected ASP.NET Core CRUD REST endpoints
+                backed by Microsoft SQL Server.
+              </li>
+              <li>
+                Delivered a functional MVP within 3 months, unlocking planned
+                sales demos and trials.
+              </li>
+            </ul>
+            <div class="entry-tags">
+              <code>Angular</code> <code>TypeScript</code>
+              <code>Tailwind CSS</code> <code>ASP.NET Core</code>
+              <code>SQL Server</code>
             </div>
+          </article>
 
-            <div class="contact-box">
-                <div class="contact-methods">
-                    <div class="method">
-                        <span class="method-label">Email</span>
-                        <div class="copy-field">
-                            <a href="mailto:ssr7324@gmail.com" class="method-val">ssr7324@gmail.com</a>
-                            <button id="copy-email-btn" class="copy-btn" data-email="ssr7324@gmail.com">Copy</button>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <span class="method-label">Phone</span>
-                        <a href="tel:+64224549681" class="method-val">+64 22 454 9681</a>
-                    </div>
-                    <div class="method">
-                        <span class="method-label">Location</span>
-                        <span class="method-val">Auckland, New Zealand</span>
-                    </div>
+          <article class="entry-item">
+            <div class="entry-header">
+              <div>
+                <h3 class="entry-title">
+                  GovHack New Zealand (3-Year Track Record)
+                </h3>
+                <div class="entry-company">
+                  National Open Data Hackathon
+                  <span class="entry-sep">/</span> Consecutive Awardee
                 </div>
-
-                <div class="contact-direct-links">
-                    <a href="https://linkedin.com/in/seongrok-shin-1448961a1" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn Profile ↗</a>
-                    <a href="https://github.com/Seongrok-Shin/" target="_blank" rel="noreferrer" class="btn btn-secondary">GitHub ↗</a>
-                    <a href="https://docs.google.com/document/d/1UDamyZTqNAwNWK1NVcUFCLtd3Z0PSJNe-Y5i9z2fOiU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Full CV (Google Drive) ↗</a>
-                </div>
+              </div>
+              <div class="entry-date">2022 – 2024</div>
             </div>
-        </section>
+            <p class="entry-desc">
+              Architected and delivered functioning web products under 46-hour
+              sprint constraints utilizing open government data.
+            </p>
+            <ul class="entry-bullets">
+              <li>
+                <strong>SolarCast (2024 Runner-Up):</strong> Solar planning web
+                app featuring Three.js 3D rooftop sunlight visualization and
+                external solar irradiance APIs.
+              </li>
+              <li>
+                <strong>Green Kiwi (2023 Winner):</strong> Community household
+                carbon tracker built with Next.js, Firebase, and Chart.js.
+              </li>
+              <li>
+                <strong>PipeWatch (2022 Winner):</strong> Drainage query API
+                using GeoDjango, PostGIS spatial queries, and WebSockets for
+                real-time risk updates.
+              </li>
+            </ul>
+            <div class="entry-tags">
+              <code>Three.js</code> <code>Next.js</code> <code>GeoDjango</code>
+              <code>PostgreSQL/PostGIS</code> <code>WebSockets</code>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-tag">02 / Skills</div>
+        <h2 class="section-heading">Technical Proficiencies</h2>
+
+        <div class="skills-layout">
+          <div class="skill-row">
+            <span class="skill-category">Languages</span>
+            <span class="skill-items"
+              >C# (.NET), TypeScript, JavaScript, SQL (T-SQL, MariaDB),
+              Python</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Backend & APIs</span>
+            <span class="skill-items"
+              >ASP.NET Core Web API, RESTful APIs, JWT Authentication, Django
+              REST Framework, WebSockets</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Frontend</span>
+            <span class="skill-items"
+              >React, Next.js, Angular, Razor Pages, Redux, Vite, Tailwind CSS,
+              Bootstrap 5</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Databases</span>
+            <span class="skill-items"
+              >Azure SQL / SQL Server, MariaDB, PostgreSQL / PostGIS,
+              Firebase</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Testing & Tooling</span>
+            <span class="skill-items"
+              >Vitest, Playwright, Git, CI/CD (GitHub Actions)</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-tag">03 / Education & Status</div>
+        <h2 class="section-heading">Qualifications</h2>
+
+        <div class="edu-card">
+          <div class="edu-main">
+            <div class="edu-degree">
+              Bachelor of Computer and Information Science
+            </div>
+            <div class="edu-school">
+              Auckland University of Technology (AUT)
+            </div>
+            <div class="edu-date">
+              Mar 2021 – Dec 2023 • Auckland, New Zealand
+            </div>
+          </div>
+          <div class="edu-meta">
+            <div class="meta-label">Work Rights</div>
+            <div class="meta-val">New Zealand Open Work Visa</div>
+            <div class="meta-note">
+              Legally eligible to work without employer accreditation or visa
+              sponsorship.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-tag">04 / Contact</div>
+        <h2 class="section-heading">Get in Touch</h2>
+
+        <div class="contact-box">
+          <div class="contact-entry">
+            <span class="label">Direct Email</span>
+            <div class="copy-line">
+              <a href="mailto:ssr7324@gmail.com" class="contact-link"
+                >ssr7324@gmail.com</a
+              >
+              <button
+                id="copy-btn"
+                class="copy-trigger"
+                data-email="ssr7324@gmail.com"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+          <div class="contact-entry">
+            <span class="label">Phone</span>
+            <span class="contact-val">+64 22 454 9681</span>
+          </div>
+          <div class="contact-entry">
+            <span class="label">External Profiles</span>
+            <div class="links-row">
+              <a
+                href="https://linkedin.com/in/seongrok-shin-1448961a1"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn ↗</a
+              >
+              <a
+                href="https://github.com/Seongrok-Shin/"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub ↗</a
+              >
+              <a
+                href="https://docs.google.com/document/d/e/2PACX-1vRyzK-snUprn7fmWFF6xhkJO1kX4F_Y0AiiICVL_R_pM5PekAClO0_d5Xg6xMd_ClqlHxy21Exij9-z/pub"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CV Document ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-left">
-            <span>Designed & engineered by Mark Shin.</span>
-        </div>
-        <div class="footer-right">
-            <span>Vanilla HTML/CSS/JS • Hosted independently</span>
-        </div>
-    </footer>
-</div>
-
-<div id="toast" class="toast" role="status" aria-live="polite">Email copied to clipboard</div>
-<script src="script.js"></script>
-</body>
+    <div id="toast" class="toast" role="status" aria-live="polite">
+      Copied to clipboard
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

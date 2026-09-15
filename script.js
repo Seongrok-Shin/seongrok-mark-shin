@@ -1,86 +1,78 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
-    // 1. Dark Mode Toggle
-    const themeToggleBtn = document.getElementById("theme-toggle");
-    const themeText = themeToggleBtn.querySelector(".theme-text");
+  const themeToggle = document.getElementById("theme-toggle");
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    themeToggle.textContent = "Light";
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    themeToggle.textContent = "Dark";
+  }
 
-    if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        themeText.textContent = "Light";
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        themeText.textContent = "Dark";
-    }
+  themeToggle.addEventListener("click", () => {
+    const isDark =
+      document.documentElement.getAttribute("data-theme") === "dark";
+    const nextTheme = isDark ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    themeToggle.textContent = isDark ? "Dark" : "Light";
+  });
 
-    themeToggleBtn.addEventListener("click", () => {
-        const currentTheme = document.documentElement.getAttribute("data-theme");
-        const targetTheme = currentTheme === "dark" ? "light" : "dark";
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("main section");
 
-        document.documentElement.setAttribute("data-theme", targetTheme);
-        localStorage.setItem("theme", targetTheme);
-        themeText.textContent = targetTheme === "dark" ? "Light" : "Dark";
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
     });
 
-    // 2. Profile Image Fallback Detection
-    const profileImg = document.getElementById("profile-img");
-    const fallback = document.getElementById("profile-fallback");
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
 
-    profileImg.addEventListener("error", () => {
+  const profileImg = document.getElementById("profile-img");
+  const profileFallback = document.getElementById("profile-fallback");
+
+  profileImg.addEventListener("error", () => {
+    profileImg.style.display = "none";
+    profileFallback.style.display = "flex";
+  });
+
+  if (!profileImg.complete || profileImg.naturalWidth === 0) {
+    setTimeout(() => {
+      if (profileImg.naturalWidth === 0) {
         profileImg.style.display = "none";
-        fallback.style.display = "flex";
-    });
+        profileFallback.style.display = "flex";
+      }
+    }, 400);
+  }
 
-    // Check if profile.jpg is missing right away
-    if (!profileImg.complete || profileImg.naturalWidth === 0) {
-        // If not loaded within 500ms, failover gracefully
-        setTimeout(() => {
-            if (profileImg.naturalWidth === 0) {
-                profileImg.style.display = "none";
-                fallback.style.display = "flex";
-            }
-        }, 500);
+  const copyBtn = document.getElementById("copy-btn");
+  const toast = document.getElementById("toast");
+
+  copyBtn.addEventListener("click", async () => {
+    const email = copyBtn.getAttribute("data-email");
+    try {
+      await navigator.clipboard.writeText(email);
+      showToast("Email copied to clipboard");
+    } catch {
+      showToast(email);
     }
+  });
 
-    // 3. Expandable Case Study Details (Subtle accordions)
-    const expandBtns = document.querySelectorAll(".expand-btn");
-    expandBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const targetId = btn.getAttribute("data-target");
-            const targetEl = document.getElementById(targetId);
-            const isHidden = targetEl.hasAttribute("hidden");
-
-            if (isHidden) {
-                targetEl.removeAttribute("hidden");
-                btn.textContent = "Close Architecture Breakdown ↑";
-            } else {
-                targetEl.setAttribute("hidden", "");
-                btn.textContent = "Read Architecture Breakdown ↓";
-            }
-        });
-    });
-
-    // 4. One-Click Clipboard Copy with Toast
-    const copyBtn = document.getElementById("copy-email-btn");
-    const toast = document.getElementById("toast");
-
-    copyBtn.addEventListener("click", async () => {
-        const email = copyBtn.getAttribute("data-email");
-        try {
-            await navigator.clipboard.writeText(email);
-            showToast("Email copied to clipboard");
-        } catch (err) {
-            // Fallback
-            showToast("Selected: " + email);
-        }
-    });
-
-    function showToast(message) {
-        toast.textContent = message;
-        toast.classList.add("show");
-        setTimeout(() => {
-            toast.classList.remove("show");
-        }, 2400);
-    }
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2000);
+  }
 });
