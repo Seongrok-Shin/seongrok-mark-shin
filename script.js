@@ -5,10 +5,10 @@
 
   if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
     document.documentElement.setAttribute("data-theme", "dark");
-    themeToggle.textContent = "Light";
+    setThemeControl("dark");
   } else {
     document.documentElement.setAttribute("data-theme", "light");
-    themeToggle.textContent = "Dark";
+    setThemeControl("light");
   }
 
   themeToggle.addEventListener("click", () => {
@@ -17,8 +17,19 @@
     const nextTheme = isDark ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", nextTheme);
     localStorage.setItem("theme", nextTheme);
-    themeToggle.textContent = isDark ? "Dark" : "Light";
+    setThemeControl(nextTheme);
   });
+
+  function setThemeControl(theme) {
+    const isDark = theme === "dark";
+    themeToggle.innerHTML = isDark
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>';
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme",
+    );
+  }
 
   const navLinks = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll("main section");
